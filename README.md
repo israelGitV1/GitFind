@@ -4,6 +4,10 @@ Este projeto é uma pagina simples quer consome da Api do GitHub para mostrar to
 <p>
 <img height="400" src="https://github.com/israelGitV1/GitFind/blob/main/src/assets/GitFindPreview.png"/>
 </p>
+
+## Live Link
+
+* ### https://israelgitv1.github.io/GitFind/
 ## 🚀 Tecnologias Utilizadas
 
 - React
