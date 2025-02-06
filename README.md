@@ -2,7 +2,7 @@
 
 Este projeto é uma pagina simples quer consome da Api do GitHub para mostrar todos os repositórios desenvolvida em React , utilizando Yarn como gerenciador de pacotes.
 <p>
-<img height="400" src="https://github.com/israelGitV1/ReactCalculadora/blob/main/src/img/Captura%20de%20tela%202025-01-29%20161036.png"/>
+<img height="400" src="https://github.com/israelGitV1/GitFind/blob/main/src/assets/GitFindPreview.png"/>
 </p>
 ## 🚀 Tecnologias Utilizadas
 
