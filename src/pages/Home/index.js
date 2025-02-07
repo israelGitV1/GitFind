@@ -4,15 +4,18 @@ import Background from '../../assets/background.png'
 import ItemList from "../../components/ItemList";
 
 import './styles.css'
+import userEvent from "@testing-library/user-event";
 
 function App() {
   const [user, setUser] = useState("");
+  const [message, setMessage] = useState("");
   const [currentUser, setCurrentUser] = useState(null);
   const [repos, setRepos] = useState(null);
 
   const handleGetDate = async () => {
     const userData = await fetch (`https://api.github.com/users/${user}`);
     const newUser = await userData.json();
+    console.log(newUser);
 
     if(newUser.name){
       const {avatar_url, name, bio, login} = newUser;
@@ -20,11 +23,11 @@ function App() {
 
       const reposData = await fetch (`https://api.github.com/users/${user}/repos`);
       const newRepos = await reposData.json();
-      
       if(newRepos.length){
         setRepos(newRepos);
       }
-    }
+    }else
+    setMessage(newUser.message);
   }
 
     return (
@@ -52,7 +55,16 @@ function App() {
                 </div>
                 <hr />
               </>
-            ): null}
+            ):(
+              <>
+                <div className="perfil">
+                  <div>
+                    <h3>{message}</h3>
+                  </div>
+                </div>
+                <hr />
+              </>
+            )}
             {repos?.length ? (
               <div>
                   <h4 className="repositorio">Repositórios</h4>
