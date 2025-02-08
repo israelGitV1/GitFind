@@ -31,6 +31,15 @@ function App() {
     setMessage(newUser.message);
   }
 
+  const handleRemoveItemData = (name) => {
+    const newRepos = repos.filter((repo) => repo.name !== name);
+    if(newRepos.length){
+      setRepos(newRepos);
+    }
+    console.log("id: "+name);
+    console.log(newRepos);
+  }
+
     return (
       <div className="App">
         <Header/>
@@ -59,7 +68,7 @@ function App() {
               </>
             ):(
               <>
-                <div className="perfil">
+                <div className="perfilNot">
                   <div>
                     <h3>{message}</h3>
                   </div>
@@ -72,7 +81,7 @@ function App() {
                   <h4 className="repositorio">Repositórios</h4>
                   {repos.map(repo => (
                     <>
-                      <ItemList title={[repo.name]} desciption={repo.description} url={repo.html_url}/>
+                      <ItemList title={[repo.name]} desciption={repo.description} url={repo.html_url} click={() => handleRemoveItemData(repo.name)}/>
                     </>
                   ))}
                 </div>

@@ -9,12 +9,22 @@ export const ContentItemList = styled.div`
         font-size: 24px ;
         margin: 24px 0;
         text-decoration: none;
+        cursor: pointer;
     }
     a:hover {
         color: #fff;
         font-size: 24px ;
         margin: 24px 0;
 
+    }
+
+    .remove{
+        color: #999;
+        font-size: 20px;
+    }
+
+    .remove:hover{
+        color:red;
     }
 
     p {

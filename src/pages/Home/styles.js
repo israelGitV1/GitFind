@@ -30,6 +30,11 @@ export const Container = styled.div`
     margin: 40px 0;
     font-family: Arial, Helvetica, sans-serif;
     }
+    .perfilNot {
+    display: flex;
+    margin: 40px 0;
+    font-family: Arial, Helvetica, sans-serif;
+    }
 
     .profile {
         width: 120px;
