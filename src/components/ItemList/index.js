@@ -1,12 +1,12 @@
 import React from 'react'
-import './styles.css'
+import { ContentItemList } from './styles'
 
 export default function ItemList({title, desciption, url}) {
   return (
-    <div className='item-list'>
+    <ContentItemList>
       <a href={url} target= "_blank">{title}</a>
       <p>{desciption}</p>
       <hr />
-    </div>
+    </ContentItemList>
   )
 }

@@ -3,8 +3,9 @@ import Header from "../../components/Header";
 import Background from '../../assets/background.png'
 import ItemList from "../../components/ItemList";
 
-import './styles.css'
+import { Container } from "./styles";
 import userEvent from "@testing-library/user-event";
+import Input from "../../components/Input";
 
 function App() {
   const [user, setUser] = useState("");
@@ -33,15 +34,16 @@ function App() {
     return (
       <div className="App">
         <Header/>
-        <div className="conteudo">
+         <Container>
           <img src={Background} className="background" alt='backgound app'/>
           <div className="info">
-            <div>
-              <input name="usuario" 
-                value={user} 
-                onChange={event => setUser(event.target.value)} 
-                placeholder="@username"/>
-                <button onClick={handleGetDate}>Buscar</button>
+            <div> 
+               <Input 
+                  value ={user} 
+                  onChange={event => setUser(event.target.value)} 
+                  placeholder = "Digite seu User do GitHub"
+                  onClik={handleGetDate}    
+               />
             </div>
             {currentUser?.name ? (
               <>
@@ -76,7 +78,7 @@ function App() {
                 </div>
             ) : null}
           </div>
-        </div>
+        </Container>
       </div>
     );
   }
