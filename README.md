@@ -60,7 +60,13 @@ O aplicativo será iniciado e poderá ser acessado em `http://localhost:3000/`.
  ┣ 📂 assets
  ┃ ┣ 📜 backgound.png
  ┣ 📂 components
+ ┃ ┣ 📂 Button
+ ┃ ┃ ┣ 📜 index.js
+ ┃ ┃ ┣ 📜 styles.css
  ┃ ┣ 📂 Header
+ ┃ ┃ ┣ 📜 index.js
+ ┃ ┃ ┣ 📜 styles.css
+ ┃ ┣ 📂 input
  ┃ ┃ ┣ 📜 index.js
  ┃ ┃ ┣ 📜 styles.css
  ┃ ┣ 📂 ItemList
@@ -70,13 +76,14 @@ O aplicativo será iniciado e poderá ser acessado em `http://localhost:3000/`.
  ┃ ┣ 📂 Home
  ┃ ┃ ┣ 📜 index.js
  ┃ ┃ ┣ 📜 styles.css
+ ┣ 📂 services
+ ┃ ┣ 📜 api.js
  ┣ 📜 index.js
  ┣ 📜 Styles.css
 ```
 
 ## 📝 Melhorias Futuras
 
-- Componentizar Button e input.
 - Responsividatede na pagina.
 - Adicionar testes unitários.
 
