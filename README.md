@@ -12,6 +12,8 @@ Este projeto é uma pagina simples quer consome da Api do GitHub para mostrar to
 
 - React
 - Api GitHub
+- Axios
+- Styled-Components
 - Hooks (useState)
 
 ## 📦 Pré-requisitos

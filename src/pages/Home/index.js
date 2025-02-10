@@ -2,10 +2,10 @@ import { useState } from "react";
 import Header from "../../components/Header";
 import Background from '../../assets/background.png'
 import ItemList from "../../components/ItemList";
+import Input from "../../components/Input";
+import { api } from "../../services/api";
 
 import { Container } from "./styles";
-import userEvent from "@testing-library/user-event";
-import Input from "../../components/Input";
 
 function App() {
   const [user, setUser] = useState("");
@@ -14,16 +14,16 @@ function App() {
   const [repos, setRepos] = useState(null);
 
   const handleGetDate = async () => {
-    const userData = await fetch (`https://api.github.com/users/${user}`);
-    const newUser = await userData.json();
-    console.log(newUser);
-
+    //const userData = await fetch (`https://api.github.com/users/${user}`);
+    const userData = await api.get(`/users/${user}`);
+    const newUser = await userData.data;
+  
     if(newUser.name){
       const {avatar_url, name, bio, login} = newUser;
       setCurrentUser({avatar_url, name, bio, login});
 
-      const reposData = await fetch (`https://api.github.com/users/${user}/repos`);
-      const newRepos = await reposData.json();
+      const reposData = await api.get(`/users/${user}/repos`);
+      const newRepos = await reposData.data;
       if(newRepos.length){
         setRepos(newRepos);
       }
@@ -37,7 +37,6 @@ function App() {
       setRepos(newRepos);
     }
     console.log("id: "+name);
-    console.log(newRepos);
   }
 
     return (
